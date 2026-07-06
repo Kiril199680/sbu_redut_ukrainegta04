@@ -2,49 +2,114 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>ДБ "Редут" — Інформаційний блок</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDUST // RECRUITMENT PROTOCOL</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Додаємо стилі для кнопки форми, щоб вона виглядала як у Apple/Nothing -->
+    <style>
+        .premium-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 16px 35px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #fff;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .premium-btn:hover {
+            background: transparent;
+            color: #fff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Департамент безпеки «Редут»</h1>
-        <p>Служба безпеки України • Вступ та Законодавство</p>
-    </header>
-    <nav>
-        <a href="index.html">Головна</a>
-        <a href="about.html">Про Департамент & Структура</a>
-        <a href="archive.html">База даних & Справи</a>
-        <a href="join.html">Приєднатися & Інфо</a>
-    </nav>
-    <div class="container">
-        <h2>Законодавство та внутрішні документи</h2>
-        <p>Діяльність ДБ «Редут» базується на принципах законності. Нижче наведені відкриті нормативно-правові акти:</p>
-        <ul>
-            <li>Закон України «Про Службу безпеки України»;</li>
-            <li>Положення про Департамент безпеки «Редут» від липня 2026 року;</li>
-            <li>Внутрішній устав та регламент взаємодії УОР «Вектор» та УАД «Контур».</li>
-        </ul>
 
-        <h2>Відомчі нагороди та символіка</h2>
-        <p>За видатні досягнення у ліквідації ОЗГ та захисті державної безпеки співробітники нагороджуються:</p>
-        <ul>
-            <li><strong>Жетон ДБ «Редут»</strong> — видається при зарахуванні до штату управління;</li>
-            <li><strong>Відзнака «За випередження»</strong> — за успішно скоординовану та реалізовану оперативну розробку;</li>
-            <li><strong>Медаль «Честь та Конфіденційність»</strong> — за вагомий внесок у розвиток агентурної мережі.</li>
-        </ul>
-
-        <h2>Приєднатися до підрозділу</h2>
-        <p>Набір у ДБ «Редут» суворо обмежений і проходить за спеціальними критеріями відбору (відповідно до правил серверу та внутрішніх вимог командування).</p>
-        <p><strong>Базові вимоги до кандидатів:</strong></p>
-        <ul>
-            <li>Бездоганне знання правил RP-складової та законодавчої бази;</li>
-            <li>Досвід роботи в силових структурах або класичних підрозділах СБУ;</li>
-            <li>Високий рівень адекватності, стресостійкості та вміння працювати в умовах повної конфіденційності.</li>
-        </ul>
-        <p><strong>Статус прийому заяв:</strong> <span style="color: #da3633; font-weight: bold;">НАБІР ЗАЧИНЕНО</span>. Слідкуйте за офіційними повідомленнями пресцентру на головній сторінці.</p>
+    <!-- Рядок системного моніторингу -->
+    <div class="system-status">
+        <div>Node: SBU_MAIN_GATE // RE-2026</div>
+        <div class="status-online">Recruitment Portal: Open</div>
     </div>
+
+    <!-- Навігація Apple-style -->
+    <div class="nav-wrapper">
+        <nav>
+            <div class="brand">Redut</div>
+            <div class="nav-links">
+                <a href="index.html">Специфікація</a>
+                <a href="about.html">Про Департамент</a>
+                <a href="archive.html">Оперативна база</a>
+                <a href="join.html" class="active">Рекрутинг</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Елітна презентація розділу -->
+    <header class="hero-section">
+        <div class="emblem-wrapper">
+            <img src="redut-logo.png" alt="Емблема ДБ Редут" class="emblem-img">
+        </div>
+        <div class="hero-text">
+            <h1>Рекрутинг</h1>
+            <p>Прийом до лав спецпідрозділу</p>
+        </div>
+    </header>
+
+    <main class="content-grid">
+        
+        <!-- КРИТЕРІЇ ВІДБОРУ -->
+        <section class="large-panel span-6">
+            <span class="panel-tag">Requirements // Criteria</span>
+            <h2 class="panel-title">Критерії для кандидатів</h2>
+            <div class="meta-row">
+                <div class="meta-item">
+                    <div class="meta-label">Професійні вимоги</div>
+                    <div class="meta-value">Бездоганне знання нормативно-правової бази, високий рівень фізичної підготовки та володіння тактичними навичками.</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Психологічна стійкість</div>
+                    <div class="meta-value">Здатність діяти в умовах підвищеного стресу, критичне мислення та готовність до негласної роботи.</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Додатково</div>
+                    <div class="meta-value">Досвід роботи в оперативних структурах або володіння навичками кібербезпеки буде суттєвою перевагою.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАНАЛ ПОДАЧІ АНКЕТИ -->
+        <section class="large-panel span-6" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <span class="panel-tag">Application // Apply</span>
+                <h2 class="panel-title">Подати рапорт</h2>
+                <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
+                    Якщо ви готові стати частиною елітної структури, пройти жорсткий професійний відбір та служити на благо державної безпеки України — ініціюйте протокол подачі анкети за посиланням нижче.
+                </p>
+                <p style="color: var(--gold); font-size: 13px; font-family: 'Space Grotesk', sans-serif;">
+                    ⚠️ Усі кандидати проходять перевірку на поліграфі та комплексний спецдогляд.
+                </p>
+            </div>
+            
+            <!-- Заміни посилання в href на реальну лінку на вашу Google-форму або Discord, якщо потрібно -->
+            <div>
+                <a href="https://forms.gle/your-form-link" target="_blank" class="premium-btn">Ініціювати рапорт</a>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        © 2026 Департамент безпеки «Редут» СБУ.
+        <div>© 2026 INTERNAL DATABASE OF SECURITY SERVICE OF UKRAINE</div>
+        <div>RESTRICTED ACCESS</div>
     </footer>
+
 </body>
 </html>
