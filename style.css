@@ -1,87 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playamp&family=Roboto+Mono:wght@300;500&display=swap');
+
+:root {
+    --bg-color: #05070a;
+    --panel-bg: rgba(13, 17, 23, 0.75);
+    --accent-blue: #00f0ff;
+    --deep-blue: #0055ff;
+    --text-color: #e2e8f0;
+    --border-glow: rgba(0, 240, 255, 0.2);
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 85, 255, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 240, 255, 0.1) 0px, transparent 50%);
 }
-header {
-    background-color: #161b22;
-    padding: 20px;
+
+/* Дисклеймер */
+.disclaimer-bar {
+    background: linear-gradient(90deg, #ff0055, #990022);
+    color: #fff;
     text-align: center;
-    border-bottom: 2px solid #1f6feb;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(255, 0, 85, 0.4);
+    border-bottom: 2px solid #ff0055;
+    animation: pulseGlow 2s infinite ease-in-out;
 }
+
+header {
+    background: linear-gradient(180deg, rgba(10,15,30,0.9) 0%, rgba(5,7,10,0.6) 100%);
+    backdrop-filter: blur(10px);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 header h1 {
-    color: #58a6ff;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--deep-blue);
     margin: 0;
-    font-size: 24px;
+    font-size: 32px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
+
 header p {
-    color: #8b949e;
-    font-style: italic;
-    margin: 5px 0 0 0;
+    color: #8a99ad;
+    letter-spacing: 2px;
+    margin: 10px 0 0 0;
+    font-size: 14px;
 }
+
+/* Навігація майбутнього */
 nav {
-    background-color: #21262d;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: rgba(10, 15, 26, 0.8);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 5px 0;
+    sticky: top;
 }
+
 nav a {
-    color: #c9d1d9;
+    color: #8a99ad;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
-nav a:hover {
-    color: #58a6ff;
+
+nav a:hover, nav a.active {
+    color: var(--accent-blue);
+    text-shadow: 0 0 8px var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
+    background: rgba(0, 240, 255, 0.05);
 }
+
+/* Сучасні контейнери (Ефект Скла) */
 .container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #161b22;
-    border-radius: 6px;
-    border: 1px solid #30363d;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    background: var(--panel-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    transform: translateY(20px);
+    animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
 h2 {
-    color: #58a6ff;
-    border-bottom: 1px solid #30363d;
-    padding-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 15px;
+    margin-top: 40px;
+    text-transform: uppercase;
 }
+
+h2:first-of-type { margin-top: 0; }
+
 h3 {
-    color: #1f6feb;
+    color: var(--accent-blue);
+    font-size: 18px;
+    margin-top: 25px;
 }
+
+/* Девіз */
 .motto {
     font-size: 18px;
     text-align: center;
-    background-color: #21262d;
-    padding: 15px;
-    border-left: 4px solid #1f6feb;
-    margin: 20px 0;
+    background: linear-gradient(135deg, rgba(0,85,255,0.1), rgba(0,240,255,0.05));
+    padding: 25px;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
-.cycle {
-    text-align: center;
-    font-weight: bold;
-    color: #58a6ff;
-    background: #0d1117;
-    padding: 10px;
-    border-radius: 4px;
+
+.motto strong {
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
+
+/* Елементи списків */
 ul {
-    padding-left: 20px;
+    list-style: none;
+    padding-left: 0;
 }
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+ul li::before {
+    content: "➢";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    text-shadow: 0 0 5px var(--accent-blue);
+}
+
+.cycle {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #090d14;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.05);
+    font-weight: bold;
+    color: var(--accent-blue);
+}
+
+.cycle span {
+    padding: 5px 10px;
+}
+
+.badge-rp {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.news-item {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 15px 0;
+}
+.news-item:last-child { border: none; }
+
 footer {
     text-align: center;
-    padding: 20px;
-    color: #8b949e;
+    padding: 40px;
+    color: #56667a;
     font-size: 12px;
+    letter-spacing: 1px;
 }
-.badge-rp {
-    background-color: #238636;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 11px;
+
+/* Анімації */
+@keyframes fadeUp {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 4px 20px rgba(255, 0, 85, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(255, 0, 85, 0.7); }
+    100% { box-shadow: 0 4px 20px rgba(255, 0, 85, 0.4); }
 }
