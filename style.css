@@ -1,97 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --sbu-dark-bg: #0b0e14;       /* Глибокий мілітарі чорно-синій */
-    --sbu-panel-bg: #121824;      /* Сувора темно-синя плашка */
-    --sbu-gold: #c5a059;          /* Державне золото для акцентів */
-    --sbu-blue: #1d4ed8;          /* Офіційний синій */
-    --text-light: #f1f5f9;        /* Чистий світлий текст */
-    --text-muted: #94a3b8;        /* Текст приміток */
+    --redut-dark-bg: #0b1411;     /* Найтемніший зелений (майже чорний, як тіні на прапорі) */
+    --redut-green: #132720;       /* Глибокий військовий смарагдово-зелений з прапора */
+    --redut-gold: #c5a059;        /* Тепле золото, яким вишито напис та Тризуб */
+    --redut-gold-dim: rgba(197, 160, 89, 0.2);
+    --text-light: #f4f6f5;        /* М'який білий текстиль */
+    --text-muted: #8ea499;        /* Приглушений зелений для підписів */
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--sbu-dark-bg);
+    background-color: var(--redut-dark-bg);
     color: var(--text-light);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-/* Строгий державний дисклеймер */
+/* Офіційне попередження */
 .disclaimer-panel {
-    background-color: #7f1d1d; /* Стриманий темно-червоний */
+    background-color: #631717; 
     color: #fca5a5;
     text-align: center;
     padding: 10px 15px;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
-    border-bottom: 1px solid #b91c1c;
+    border-bottom: 1px solid var(--redut-gold);
     text-transform: uppercase;
 }
 
 header {
-    background-color: var(--sbu-panel-bg);
-    padding: 35px 20px;
+    background-color: var(--redut-green);
+    padding: 50px 20px;
     text-align: center;
-    border-bottom: 3px solid var(--sbu-gold);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid var(--redut-gold);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Тонка золота лінія-рамка, як кант на прапорі */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--redut-gold);
+    opacity: 0.5;
 }
 
 header h1 {
-    font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
-    font-size: 28px;
-    letter-spacing: 1.5px;
+    font-size: 30px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 header p {
-    color: var(--sbu-gold);
+    color: var(--redut-gold);
     font-size: 13px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 8px 0 0 0;
+    margin: 10px 0 0 0;
     font-weight: 600;
 }
 
-/* Офіційна навігація */
+/* Навігація в стилі урядових порталів */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #1e293b;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #0d1b16;
+    border-bottom: 1px solid var(--redut-gold-dim);
 }
 
 nav a {
     color: var(--text-muted);
     text-decoration: none;
-    padding: 15px 25px;
+    padding: 16px 30px;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.2s ease;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover, nav a.active {
-    color: #ffffff;
-    background-color: var(--sbu-panel-bg);
-    border-bottom: 2px solid var(--sbu-gold);
+    color: var(--redut-gold);
+    background-color: var(--redut-green);
 }
 
-/* Інформаційні папки/контейнери */
+/* Основний блок-папка */
 .container {
     max-width: 950px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: var(--sbu-panel-bg);
-    border: 1px solid #1e293b;
-    border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    margin: 50px auto;
+    padding: 45px;
+    background-color: var(--redut-green);
+    border: 1px solid var(--redut-gold-dim);
+    border-radius: 2px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 h2 {
@@ -100,64 +112,68 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid var(--sbu-blue);
-    padding-bottom: 8px;
+    border-bottom: 1px solid var(--redut-gold);
+    padding-bottom: 10px;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* Девіз як офіційна цитата */
+/* Офіційне гасло — оформлене як вишивка на прапорі */
 .motto-box {
-    background-color: #0b0e14;
-    border-left: 4px solid var(--sbu-gold);
-    padding: 20px;
-    margin: 30px 0;
+    background-color: var(--redut-dark-bg);
+    border: 1px solid var(--redut-gold-dim);
+    border-left: 4px solid var(--redut-gold);
+    padding: 25px;
+    margin: 35px 0;
+    text-align: center;
 }
 
 .motto-box h3 {
-    margin: 0 0 5px 0;
-    color: var(--sbu-gold);
-    font-size: 12px;
+    margin: 0 0 8px 0;
+    color: var(--text-muted);
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 
 .motto-box p {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 18px;
-    color: #e2e8f0;
+    font-size: 24px;
+    color: var(--redut-gold);
     margin: 0;
+    font-weight: 600;
 }
 
-/* Відомчі новини */
+/* Відомості та рапорти пресцентру */
 .news-terminal {
     margin-top: 20px;
 }
 
 .news-row {
-    padding: 15px 0;
-    border-bottom: 1px solid #1e293b;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--redut-gold-dim);
 }
 .news-row:last-child { border: none; }
 
 .news-date {
-    color: var(--sbu-gold);
+    color: var(--redut-gold);
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 4px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
 }
 
 .news-text {
-    font-size: 14px;
-    color: var(--text-light);
+    font-size: 14.5px;
+    color: #e2e8f0;
 }
 
 footer {
     text-align: center;
-    padding: 40px;
-    color: #475569;
-    font-size: 12px;
-    letter-spacing: 1px;
+    padding: 50px;
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
