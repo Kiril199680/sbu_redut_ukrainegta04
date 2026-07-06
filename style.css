@@ -1,179 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
 
 :root {
-    --redut-dark-bg: #0b1411;     /* Найтемніший зелений (майже чорний, як тіні на прапорі) */
-    --redut-green: #132720;       /* Глибокий військовий смарагдово-зелений з прапора */
-    --redut-gold: #c5a059;        /* Тепле золото, яким вишито напис та Тризуб */
-    --redut-gold-dim: rgba(197, 160, 89, 0.2);
-    --text-light: #f4f6f5;        /* М'який білий текстиль */
-    --text-muted: #8ea499;        /* Приглушений зелений для підписів */
+    --mil-black: #080c0a;        /* Глибокий матовий мілітарі тон */
+    --mil-dark: #0f1613;         /* Тактичний колір блоків */
+    --mil-green: #1a2922;        /* Текстурний оливковий з емблеми */
+    --mil-green-light: #2c4439;  /* Світла олива для меж та ховерів */
+    --mil-gold: #d4af37;         /* Шляхетне золото для маркерів та емблеми */
+    --mil-gold-dim: rgba(212, 175, 55, 0.15);
+    --text-pure: #ffffff;
+    --text-clean: #e2e8f0;
+    --text-muted: #6b8276;       /* Стриманий захисний колір для другорядного тексту */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--redut-dark-bg);
-    color: var(--text-light);
-    margin: 0;
-    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--mil-black);
+    color: var(--text-clean);
+    overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Офіційне попередження */
-.disclaimer-panel {
-    background-color: #631717; 
+/* Верхній тактичний інформер */
+.top-disclaimer {
+    background: #451a1a;
     color: #fca5a5;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-bottom: 1px solid var(--redut-gold);
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-}
-
-header {
-    background-color: var(--redut-green);
-    padding: 50px 20px;
-    text-align: center;
-    border-bottom: 2px solid var(--redut-gold);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
-    position: relative;
-}
-
-/* Тонка золота лінія-рамка, як кант на прапорі */
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--redut-gold);
-    opacity: 0.5;
-}
-
-header h1 {
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0;
-    font-size: 30px;
+    font-size: 11px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--mil-gold);
 }
 
-header p {
-    color: var(--redut-gold);
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin: 10px 0 0 0;
-    font-weight: 600;
-}
-
-/* Навігація в стилі урядових порталів */
+/* Сучасна навігація у вигляді фіксованої плашки */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #0d1b16;
-    border-bottom: 1px solid var(--redut-gold-dim);
+    align-items: center;
+    background: rgba(15, 22, 19, 0.95);
+    border-bottom: 1px solid var(--mil-green-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
 nav a {
+    font-family: 'Oswald', sans-serif;
     color: var(--text-muted);
     text-decoration: none;
-    padding: 16px 30px;
-    font-size: 13px;
-    font-weight: 600;
+    padding: 20px 25px;
+    font-size: 14px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a:hover, nav a.active {
-    color: var(--redut-gold);
-    background-color: var(--redut-green);
+    color: var(--mil-gold);
+    background: var(--mil-green);
 }
 
-/* Основний блок-папка */
-.container {
-    max-width: 950px;
-    margin: 50px auto;
-    padding: 45px;
-    background-color: var(--redut-green);
-    border: 1px solid var(--redut-gold-dim);
-    border-radius: 2px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-}
-
-h2 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid var(--redut-gold);
-    padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-/* Офіційне гасло — оформлене як вишивка на прапорі */
-.motto-box {
-    background-color: var(--redut-dark-bg);
-    border: 1px solid var(--redut-gold-dim);
-    border-left: 4px solid var(--redut-gold);
-    padding: 25px;
-    margin: 35px 0;
+/* Головний блок презентації шеврону */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, var(--mil-dark), var(--mil-black));
+    border-bottom: 1px solid var(--mil-green);
 }
 
-.motto-box h3 {
-    margin: 0 0 8px 0;
-    color: var(--text-muted);
-    font-size: 11px;
+.emblem-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.main-emblem {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 20px var(--mil-gold-dim);
+    transition: transform 0.5s ease;
+}
+
+.main-emblem:hover {
+    transform: scale(1.03);
+}
+
+.hero-section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    color: var(--text-pure);
+    margin-bottom: 10px;
 }
 
-.motto-box p {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 24px;
-    color: var(--redut-gold);
-    margin: 0;
+.hero-section p {
+    font-size: 14px;
+    color: var(--mil-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
     font-weight: 600;
 }
 
-/* Відомості та рапорти пресцентру */
-.news-terminal {
-    margin-top: 20px;
+/* Контентна сітка */
+.main-grid {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
 }
 
-.news-row {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--redut-gold-dim);
+.card {
+    background: var(--mil-dark);
+    border: 1px solid var(--mil-green);
+    padding: 35px;
+    position: relative;
+    border-radius: 4px;
 }
-.news-row:last-child { border: none; }
 
-.news-date {
-    color: var(--redut-gold);
+/* Сучасний акцентний куточок у стилі мілітарі-інтерфейсів */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--mil-gold);
+    border-left: 2px solid var(--mil-gold);
+}
+
+.card h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-pure);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card h2::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: var(--mil-green-light);
+}
+
+.card p {
+    font-size: 15px;
+    color: var(--text-clean);
+    margin-bottom: 15px;
+}
+
+/* Брутальний блок з девізом */
+.motto-banner {
+    background: var(--mil-green);
+    border: 1px solid var(--mil-gold-dim);
+    padding: 25px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.motto-banner span {
+    display: block;
+    font-family: 'Oswald', sans-serif;
     font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    color: var(--mil-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
-.news-text {
-    font-size: 14.5px;
-    color: #e2e8f0;
+.motto-banner h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-pure);
+    letter-spacing: 1px;
+}
+
+/* Стрічка активності */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    border-left: 2px solid var(--mil-gold);
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: var(--mil-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.timeline-title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
 footer {
     text-align: center;
-    padding: 50px;
+    padding: 60px 20px;
     color: var(--text-muted);
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    border-top: 1px solid var(--mil-dark);
+}
+
+@media(max-width: 768px) {
+    .hero-section h1 { font-size: 32px; }
+    nav { flex-wrap: wrap; }
+    nav a { padding: 15px 12px; font-size: 12px; }
 }
