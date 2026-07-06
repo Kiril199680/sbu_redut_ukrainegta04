@@ -2,44 +2,102 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>ДБ "Редут" — Бази даних та Справи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDUST // OPERATIVE ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="disclaimer-bar">
-    УВАГА: ЦЕЙ ВЕБСАЙТ СТВОРЕНИЙ ВИКЛЮЧНО ДЛЯ ІГРОВОЇ РЕАЛЬНОСТІ (RP-ПРОЄКТУ) І НЕ МАЄ НІЧОГО СПІЛЬНОГО З ДІЮЧИМИ ДЕРЖАВНИМИ ОРГАНАМИ, СБУ ЧИ РЕАЛЬНИМИ СЕКРЕТНИМИ СЛУЖБАМИ.
-</div>
-    <header>
-        <h1>Департамент безпеки «Редут»</h1>
-        <p>Служба безпеки України • Оперативні відомості</p>
-    </header>
-    <nav>
-        <a href="index.html">Головна</a>
-        <a href="about.html">Про Департамент & Структура</a>
-        <a href="archive.html">База даних & Справи</a>
-        <a href="join.html">Приєднатися & Інфо</a>
-    </nav>
-    <div class="container">
-        <h2>Розшукувані особи та ОЗГ</h2>
-        <p>У цьому розділі публікується актуальна інформація щодо осіб та злочинних організацій, які перебувають у розробці або оголошені у внутрішньосерверний розшук.</p>
-        <ul>
-            <li><strong>Орієнтування №001:</strong> ОЗГ "Синдикат" (Організований наркотрафік та незаконний обіг зброї). Особливо небезпечні, пересуваються на чорних автомобілях без номерних знаків.</li>
-            <li><strong>Розшукуваний особа:</strong> Семченко А. В. (Підозра у корупції високого рівня та співпраці з ОЗГ).</li>
-        </ul>
 
-        <h2>Операції <span class="badge-rp">RP-Звіти</span></h2>
-        <p>Архів успішно завершених спецоперацій, затримань та ліквідації злочинних схем:</p>
-        <ul>
-            <li><strong>Спецоперація «Чисте небо» [Архів]</strong> — Ліквідація схеми постачання нелегальної зброї в державні структури. Затримано 3 лідерів угруповання, вилучено понад 50 одиниць нелегального озброєння.</li>
-            <li><strong>Операція «Кріт» [Архів]</strong> — Виявлення та затримання посадової особи мерії, що передавала конфіденційні дані представникам криміналітету.</li>
-        </ul>
-
-        <h2>Архів оперативних справ</h2>
-        <p>Закриті оперативні розробки, матеріали яких повністю задокументовані та передані до Головного слідчого управління СБУ або органів прокуратури для кримінального провадження.</p>
-        <p><em>Наразі доступ до детальних матеріалів архіву обмежено згідно з принципом конфіденційності підрозділу.</em></p>
+    <!-- Рядок системного моніторингу -->
+    <div class="system-status">
+        <div>Node: SBU_MAIN_GATE // RE-2026</div>
+        <div class="status-online">Operational Status: Active</div>
     </div>
+
+    <!-- Навігація Apple-style -->
+    <div class="nav-wrapper">
+        <nav>
+            <div class="brand">Redut</div>
+            <div class="nav-links">
+                <a href="index.html">Специфікація</a>
+                <a href="about.html">Про Департамент</a>
+                <a href="archive.html" class="active">Оперативна база</a>
+                <a href="join.html">Рекрутинг</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Елітна презентація розділу -->
+    <header class="hero-section">
+        <div class="emblem-wrapper">
+            <img src="redut-logo.png" alt="Емблема ДБ Редут" class="emblem-img">
+        </div>
+        <div class="hero-text">
+            <h1>Оперативний Архів</h1>
+            <p>База даних та реєстр розслідувань</p>
+        </div>
+    </header>
+
+    <main class="content-grid">
+        
+        <!-- ІНФОРМАЦІЙНА ПАНЕЛЬ АРХІВУ -->
+        <section class="large-panel span-12">
+            <span class="panel-tag">Database // Restricted</span>
+            <h2 class="panel-title">Система моніторингу ОЗГ</h2>
+            <p style="color: var(--text-muted); font-size: 15px; max-width: 800px; margin-bottom: 30px;">
+                Доступ до розгорнутих матеріалів кримінальних проваджень, оперативних розробок та агентурних даних надається виключно авторизованим співробітникам СБУ з рівнем допуску <span style="color: var(--gold);">SECRET // LEVEL 3</span>.
+            </p>
+            
+            <div class="meta-row">
+                <div class="meta-item">
+                    <div class="meta-label">Поточний статус бази даних</div>
+                    <div class="meta-value" style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; color: #3b82f6;">
+                        Синхронізацію завершено. Усі оперативні картки переведено в режим шифрування AES-256.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАРТКИ ОПЕРАТИВНИХ СПРАВ -->
+        <section class="large-panel span-12" style="background: transparent; border: none; padding: 0;">
+            <div class="cards-container" style="margin-top: 0;">
+                
+                <div class="badge-card">
+                    <div class="card-branch" style="color: #ef4444;">CASE #0942 // ACTIVE</div>
+                    <div class="card-role">Справа «Синдикат»</div>
+                    <p style="color: var(--text-muted); font-size: 13px; margin: 10px 0 15px;">
+                        Розробка каналів контрабанди важкого озброєння на південному напрямку. Об'єкт під негласним спостереженням УОР «Вектор».
+                    </p>
+                    <div class="card-code" style="font-size: 11px;">СТАТУС: ДОКУМЕНТУВАННЯ</div>
+                </div>
+
+                <div class="badge-card">
+                    <div class="card-branch" style="color: var(--gold);">CASE #1105 // SUSPENDED</div>
+                    <div class="card-role">Контур «Картель»</div>
+                    <p style="color: var(--text-muted); font-size: 13px; margin: 10px 0 15px;">
+                        Впровадження негласної агентури в логістичну мережу фінансування наркосиндикату. Контролюється УАД «Контур».
+                    </p>
+                    <div class="card-code" style="font-size: 11px;">СТАТУС: АГЕНТУРНЕ ВПРОВАДЖЕННЯ</div>
+                </div>
+
+                <div class="badge-card">
+                    <div class="card-branch" style="color: #10b981;">CASE #0811 // ARCHIVED</div>
+                    <div class="card-role">Операція «Блокада»</div>
+                    <p style="color: var(--text-muted); font-size: 13px; margin: 10px 0 15px;">
+                        Нейтралізація корупційної схеми у вищих ешелонах влади, що загрожувала оборонному сектору. Справу передано до суду.
+                    </p>
+                    <div class="card-code" style="font-size: 11px; color: #10b981;">СТАТУС: НЕЙТРАЛІЗОВАНО</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
     <footer>
-        © 2026 Департамент безпеки «Редут» СБУ.
+        <div>© 2026 INTERNAL DATABASE OF SECURITY SERVICE OF UKRAINE</div>
+        <div>RESTRICTED ACCESS</div>
     </footer>
+
 </body>
 </html>
